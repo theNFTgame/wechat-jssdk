@@ -24,8 +24,8 @@ require(['wechat', 'weixin'], function (wechat, wx) {
     a = 'wxf8b4f85f3a794e77';//appId
   $.when(wechat.getTicket(link)).done(function (d) {
     var j = d.ticket,
-      n = wechat.randomWord(),//nonceStr
-      t = wechat.timeStamp(),//timestamp
+      n = wechat.randomWord(),//nonceStr有一个非必须参数len->随机字符串长度
+      t = wechat.timeStamp(),//timestamp当前时间
       u = window.location.href,//url
       s = wechat.string1(j, n, t, u);//signature
     console.log(j, n, t, u, s);
@@ -41,4 +41,5 @@ require(['wechat', 'weixin'], function (wechat, wx) {
 
 ```
 ### debug
+---
 add Querystring `debug=true` to the location href url 
