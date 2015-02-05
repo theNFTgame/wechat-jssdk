@@ -1,4 +1,4 @@
-define('wechat', ['jquery', 'sha1', 'weixin'], function ($, jsSHA, wx) {
+define('wechat', ['jquery', 'sha1', 'jssdk'], function ($, jsSHA, wx) {
   function Wechat() {};
   Wechat.prototype = {
     constructor: this,
